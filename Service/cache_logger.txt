@@ -1,0 +1,81 @@
+
+05/02/2016 05:45:55 am
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0 WHERE t0.Genre = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Literature'</font> <i>(length=10)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'string'</font> <i>(length=6)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'24444'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>
+05/02/2016 06:05:10 am
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25598'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>
+05/02/2016 06:05:10 am
+"START TRANSACTION"
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25598'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>
+05/02/2016 06:05:10 am
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'05/02/2016 06:05:10 am'</font> <i>(length=22)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'string'</font> <i>(length=6)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25598'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>
+05/02/2016 06:05:10 am
+"COMMIT"
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25598'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>
+05/02/2016 06:06:19 am
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0 WHERE t0.Genre = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Academic'</font> <i>(length=8)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'string'</font> <i>(length=6)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=5)</i>
+  'hits' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'15'</font> <i>(length=2)</i>
+  'misses' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'uptime' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25668'</font> <i>(length=5)</i>
+  'memory_usage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'350'</font> <i>(length=3)</i>
+  'memory_available' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'67108864'</font> <i>(length=8)</i>
+</pre>

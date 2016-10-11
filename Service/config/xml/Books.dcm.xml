@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Books" table="books">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="isbn" type="string" column="ISBN" length="10" nullable="false"/>
+    <field name="title" type="string" column="Title" length="255" nullable="false"/>
+    <field name="author" type="string" column="Author" length="255" nullable="false"/>
+    <field name="cover" type="string" column="Cover" length="255" nullable="false"/>
+    <field name="publisher" type="string" column="Publisher" length="255" nullable="false"/>
+    <field name="pages" type="integer" column="Pages" nullable="false"/>
+    <field name="price" type="float" column="Price" precision="10" scale="0" nullable="false"/>
+    <field name="reviews" type="text" column="Reviews" length="65535" nullable="true"/>
+    <field name="description" type="text" column="Description" length="65535" nullable="true"/>
+    <field name="rating" type="integer" column="Rating" nullable="true"/>
+    <field name="stock" type="integer" column="stock" nullable="false"/>
+    <field name="genre" type="string" column="Genre" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

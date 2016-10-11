@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.post demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+
+function sndmail(){
+		//alert("hwllo");
+		var email = "srikanth90.krish@gmail.com";//$("#InputEmail").val();
+		var name = "surbhi mathur";//$("#InputName").val();
+		var message = "howdy"; //$("#InputMessage").val();
+				
+		if (email =='')	{
+	$('input[type="email"]').css("border","1px solid red");
+	$('#error').addClass('alert alert-danger').html("Please fill all the required fields...!");
+	valid='false';
+	}
+		
+		
+	
+	if(email ==''){
+		// $('input[type="email"],input[type="password"]').css("border","1px solid red");
+		// $('input[type="email"],input[type="password"]').css("box-shadow","0 0 3px red");
+		alert("Please fill all fields...!!!!!!");
+		$('#error').addClass('alert alert-danger').html("Please fill all the required fields...!");
+		// alert(valid);
+	}
+	//else if(!test)
+	//	{
+	//		$('input[type="email"]').css("border","1px solid red");
+	//		$('input[type="email"]').css("box-shadow","0 0 3px red");
+	//		alert("Please enter a valid email...!");
+	//		$('#error').addClass('alert alert-danger').html("Please enter a valid email...!");
+	//	}
+	else {
+		///alert('start');
+		console.log("start");
+		$.post("https://localhost/service/soap/PHP/examples/gmail.php",{email:email, name: name, msg: message},
+			function(data) {
+			//alert("sent");
+			console.log(data);
+				if(data=='Fail') {
+					$('input[type="email"],input[type="text"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+					$('#error').addClass('alert alert-danger').html(data);
+					// alert(data);
+				}
+				else if(data=='Internal Error...!'){
+					$('input[type="email"],input[type="password"],input[type="text"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+					$('#error').addClass('alert alert-danger').html("Sorry Some Internal Error Occured. Please try again later...!");
+					// alert(data);
+				}
+				 else if(data=='success'){
+					$("form")[0].reset();
+					$('input[type="email"],input[type="text"]').css({"border":"2px solid green","box-shadow":"0 0 5px green"});
+					$('#error').addClass('alert alert-success').html("Your Registration Completed Successfully. Redirecting to login...");
+
+					var delay = 1000; //Your delay in milliseconds
+					setTimeout(function(){ window.location = 'localhost/book3/indexs.php'; }, delay);
+					// alert(data);
+				} else{
+					$('#error').addClass('alert alert-success').html(data);
+					// alert("Some Error Occured..!");
+				}
+		});
+} 
+
+}
+
+ </script>
+</head>
+
+<body>
+ 
+<form onsubmit="sndmail()" id="searchForm">
+  <input type="text" name="s" placeholder="Search...">
+  <input type="submit" value="send now">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+<div id="result"></div>
+  
+</body>
+</html>

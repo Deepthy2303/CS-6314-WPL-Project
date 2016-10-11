@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="User" table="user">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="text" column="name" length="65535" nullable="false"/>
+    <field name="password" type="text" column="password" length="65535" nullable="true"/>
+    <field name="email" type="text" column="email" length="65535" nullable="false"/>
+    <field name="lastlogin" type="string" column="lastlogin" length="255" nullable="false"/>
+    <field name="failedlogin" type="integer" column="failedlogin" nullable="true"/>
+    <field name="imageurl" type="text" column="imageurl" length="65535" nullable="true"/>
+	<field name="address" type="text" column="address" length="65535" nullable="true"/>
+	<field name="phone" type="integer" column="phone" length="11" nullable="true"/>
+  </entity>
+</doctrine-mapping>

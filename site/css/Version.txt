@@ -1,0 +1,8 @@
+v3.3.6
+bootstrap
+bootstrap.min
+bootstrapTheme
+
+Animate v3.4.0
+
+

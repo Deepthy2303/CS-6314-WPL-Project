@@ -1,0 +1,469 @@
+
+2016-04-27 22:31:51SHOW FULL TABLES WHERE Table_type = 'BASE TABLE'
+
+2016-04-27 22:31:51SELECT COLUMN_NAME AS Field, COLUMN_TYPE AS Type, IS_NULLABLE AS `Null`, COLUMN_KEY AS `Key`, COLUMN_DEFAULT AS `Default`, EXTRA AS Extra, COLUMN_COMMENT AS Comment, CHARACTER_SET_NAME AS CharacterSet, COLLATION_NAME AS Collation FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'sds' AND TABLE_NAME = 'books'
+
+2016-04-27 22:31:51SELECT DISTINCT k.`CONSTRAINT_NAME`, k.`COLUMN_NAME`, k.`REFERENCED_TABLE_NAME`, k.`REFERENCED_COLUMN_NAME` /*!50116 , c.update_rule, c.delete_rule */ FROM information_schema.key_column_usage k /*!50116 INNER JOIN information_schema.referential_constraints c ON   c.constraint_name = k.constraint_name AND   c.table_name = 'books' */ WHERE k.table_name = 'books' AND k.table_schema = 'sds' /*!50116 AND c.constraint_schema = 'sds' */ AND k.`REFERENCED_COLUMN_NAME` is not NULL
+
+2016-04-27 22:31:51SELECT TABLE_NAME AS `Table`, NON_UNIQUE AS Non_Unique, INDEX_NAME AS Key_name, SEQ_IN_INDEX AS Seq_in_index, COLUMN_NAME AS Column_Name, COLLATION AS Collation, CARDINALITY AS Cardinality, SUB_PART AS Sub_Part, PACKED AS Packed, NULLABLE AS `Null`, INDEX_TYPE AS Index_Type, COMMENT AS Comment FROM information_schema.STATISTICS WHERE TABLE_NAME = 'books' AND TABLE_SCHEMA = 'sds'
+
+2016-04-27 22:31:51SELECT COLUMN_NAME AS Field, COLUMN_TYPE AS Type, IS_NULLABLE AS `Null`, COLUMN_KEY AS `Key`, COLUMN_DEFAULT AS `Default`, EXTRA AS Extra, COLUMN_COMMENT AS Comment, CHARACTER_SET_NAME AS CharacterSet, COLLATION_NAME AS Collation FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'sds' AND TABLE_NAME = 'orders'
+
+2016-04-27 22:31:51SELECT DISTINCT k.`CONSTRAINT_NAME`, k.`COLUMN_NAME`, k.`REFERENCED_TABLE_NAME`, k.`REFERENCED_COLUMN_NAME` /*!50116 , c.update_rule, c.delete_rule */ FROM information_schema.key_column_usage k /*!50116 INNER JOIN information_schema.referential_constraints c ON   c.constraint_name = k.constraint_name AND   c.table_name = 'orders' */ WHERE k.table_name = 'orders' AND k.table_schema = 'sds' /*!50116 AND c.constraint_schema = 'sds' */ AND k.`REFERENCED_COLUMN_NAME` is not NULL
+
+2016-04-27 22:31:51SELECT TABLE_NAME AS `Table`, NON_UNIQUE AS Non_Unique, INDEX_NAME AS Key_name, SEQ_IN_INDEX AS Seq_in_index, COLUMN_NAME AS Column_Name, COLLATION AS Collation, CARDINALITY AS Cardinality, SUB_PART AS Sub_Part, PACKED AS Packed, NULLABLE AS `Null`, INDEX_TYPE AS Index_Type, COMMENT AS Comment FROM information_schema.STATISTICS WHERE TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'sds'
+
+2016-04-27 22:31:51SELECT COLUMN_NAME AS Field, COLUMN_TYPE AS Type, IS_NULLABLE AS `Null`, COLUMN_KEY AS `Key`, COLUMN_DEFAULT AS `Default`, EXTRA AS Extra, COLUMN_COMMENT AS Comment, CHARACTER_SET_NAME AS CharacterSet, COLLATION_NAME AS Collation FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = 'sds' AND TABLE_NAME = 'user'
+
+2016-04-27 22:31:51SELECT DISTINCT k.`CONSTRAINT_NAME`, k.`COLUMN_NAME`, k.`REFERENCED_TABLE_NAME`, k.`REFERENCED_COLUMN_NAME` /*!50116 , c.update_rule, c.delete_rule */ FROM information_schema.key_column_usage k /*!50116 INNER JOIN information_schema.referential_constraints c ON   c.constraint_name = k.constraint_name AND   c.table_name = 'user' */ WHERE k.table_name = 'user' AND k.table_schema = 'sds' /*!50116 AND c.constraint_schema = 'sds' */ AND k.`REFERENCED_COLUMN_NAME` is not NULL
+
+2016-04-27 22:31:51SELECT TABLE_NAME AS `Table`, NON_UNIQUE AS Non_Unique, INDEX_NAME AS Key_name, SEQ_IN_INDEX AS Seq_in_index, COLUMN_NAME AS Column_Name, COLLATION AS Collation, CARDINALITY AS Cardinality, SUB_PART AS Sub_Part, PACKED AS Packed, NULLABLE AS `Null`, INDEX_TYPE AS Index_Type, COMMENT AS Comment FROM information_schema.STATISTICS WHERE TABLE_NAME = 'user' AND TABLE_SCHEMA = 'sds'
+
+2016-04-27 22:53:04SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 01:57:49
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 02:13:46
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 02:52:09
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 02:55:08
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:00:51
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:01:25
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:04:11
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:05:50
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:07:41
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:08:59
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:09:09
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:10:14
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:12:26
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:12:37
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 03:15:19
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 22:56:14
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 22:56:19
+"START TRANSACTION"
+
+2016-04-28 22:56:19
+UPDATE user SET lastlogin = ? WHERE id = ?
+array(2) {
+  [0]=>
+  int(1461884177)
+  [1]=>
+  int(1)
+}
+array(2) {
+  [0]=>
+  string(7) "integer"
+  [1]=>
+  string(7) "integer"
+}
+
+2016-04-28 22:56:23
+"COMMIT"
+
+2016-04-28 22:56:39
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 22:56:39
+"START TRANSACTION"
+
+2016-04-28 22:56:39
+UPDATE user SET lastlogin = ? WHERE id = ?
+array(2) {
+  [0]=>
+  int(1461884199)
+  [1]=>
+  int(1)
+}
+array(2) {
+  [0]=>
+  string(7) "integer"
+  [1]=>
+  string(7) "integer"
+}
+
+2016-04-28 22:56:39
+"COMMIT"
+
+2016-04-28 22:57:23
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 22:57:23
+"START TRANSACTION"
+
+2016-04-28 22:57:23
+UPDATE user SET lastlogin = ? WHERE id = ?
+array(2) {
+  [0]=>
+  int(1461884243)
+  [1]=>
+  int(1)
+}
+array(2) {
+  [0]=>
+  string(7) "integer"
+  [1]=>
+  string(7) "integer"
+}
+
+2016-04-28 22:57:23
+"COMMIT"
+
+2016-04-28 23:03:02
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 23:03:51
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 23:06:17
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 23:07:42
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0
+
+2016-04-28 23:08:04
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:08:04
+"START TRANSACTION"
+
+2016-04-28 23:08:04
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461884884</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:08:04
+"COMMIT"
+
+2016-04-28 23:09:51
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:09:51
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:09:51
+"START TRANSACTION"
+
+2016-04-28 23:09:51
+INSERT INTO user (name, password, email, lastlogin, failedlogin, imageurl, address, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'srikanth krish'</font> <i>(length=14)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461884991</font>
+  5 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'krishsrikanth2@gmail.com'</font> <i>(length=24)</i>
+  7 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  8 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  5 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  7 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  8 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:09:53
+"ROLLBACK"
+
+2016-04-28 23:12:07
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:12:07
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:12:07
+"START TRANSACTION"
+
+2016-04-28 23:12:07
+INSERT INTO user (name, password, email, lastlogin, failedlogin, imageurl, address, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'srikanth krish'</font> <i>(length=14)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461885127</font>
+  5 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'krishsrikanth2@gmail.com'</font> <i>(length=24)</i>
+  7 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  8 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  5 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  7 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  8 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:12:08
+"COMMIT"
+
+2016-04-28 23:12:44
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:12:44
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:13:41
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:13:41
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:17:13
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:17:13
+"START TRANSACTION"
+
+2016-04-28 23:17:13
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461885433</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:17:13
+"COMMIT"
+
+2016-04-28 23:19:34
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:19:34
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:21:32
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:21:32
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:23:53
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:23:53
+"START TRANSACTION"
+
+2016-04-28 23:23:53
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461885833</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>6</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:23:53
+"COMMIT"
+
+2016-04-28 23:24:24
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:24:24
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:29:15
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:29:15
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:29:15
+"START TRANSACTION"
+
+2016-04-28 23:29:15
+INSERT INTO user (name, password, email, lastlogin, failedlogin, imageurl, address, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'srikanth krish'</font> <i>(length=14)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'krishsrikanth2@gmail.com'</font> <i>(length=24)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886155</font>
+  5 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  7 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  8 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=8)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  2 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  3 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  4 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  5 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  6 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  7 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'text'</font> <i>(length=4)</i>
+  8 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:29:15
+"COMMIT"
+
+2016-04-28 23:30:01
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:30:01
+"START TRANSACTION"
+
+2016-04-28 23:30:01
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886201</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>10</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:30:01
+"COMMIT"
+
+2016-04-28 23:37:06
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:37:06
+"START TRANSACTION"
+
+2016-04-28 23:37:06
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886626</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>10</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:37:06
+"COMMIT"
+
+2016-04-28 23:37:55
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:37:55
+"START TRANSACTION"
+
+2016-04-28 23:37:55
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886675</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>10</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:37:55
+"COMMIT"
+
+2016-04-28 23:38:16
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:38:16
+"START TRANSACTION"
+
+2016-04-28 23:38:16
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886696</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:38:16
+"COMMIT"
+
+2016-04-28 23:41:36
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:41:37
+"START TRANSACTION"
+
+2016-04-28 23:41:37
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461886897</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>2</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:41:37
+"COMMIT"
+
+2016-04-28 23:44:29
+SELECT t0.name AS name1, t0.password AS password2, t0.email AS email3, t0.lastlogin AS lastlogin4, t0.failedlogin AS failedlogin5, t0.imageurl AS imageurl6, t0.address AS address7, t0.phone AS phone8, t0.id AS id9 FROM user t0
+
+2016-04-28 23:44:29
+"START TRANSACTION"
+
+2016-04-28 23:44:29
+UPDATE user SET lastlogin = ? WHERE id = ?
+<pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1461887069</font>
+  1 <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>2</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=2)</i>
+  0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+  1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'integer'</font> <i>(length=7)</i>
+</pre>
+2016-04-28 23:44:29
+"COMMIT"
+
+2016-04-28 23:50:58
+SELECT t0.ISBN AS ISBN1, t0.Title AS Title2, t0.Author AS Author3, t0.Cover AS Cover4, t0.Publisher AS Publisher5, t0.Pages AS Pages6, t0.Price AS Price7, t0.Reviews AS Reviews8, t0.Description AS Description9, t0.Rating AS Rating10, t0.stock AS stock11, t0.Genre AS Genre12, t0.id AS id13 FROM books t0

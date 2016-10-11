@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta name="google-signin-client_id" content="930467823566-41edld8ad1jfc851n8dkqsqkmaghhnva.apps.googleusercontent.com">
+
+
+<title>WebService Client Demo</title>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<style>
+h1      { color:#000066; margin-bottom:5px; }
+.TxtBox { width:180px; }
+</style>
+
+<body>
+
+<h1>Math Calculation Webservice</h1>
+<b><font color=green>This demo connects to localhost</font></b><br>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<Form action="http://localhost/client/loginHandler.php" method="POST">
+	Email:
+	<br><input type="text" class="TxtBox" id="email" value="">
+	<br>Password:
+	<br><input type="password" class="TxtBox" id="password" value="">
+	<br>name:
+	<br><input type="text" class="TxtBox" id="name" value="">
+	<br>imageurl:
+	<br><input type="text" class="TxtBox" id="imgurl" value="">
+	
+	<Input type="submit" value="Login">
+</Form>
+
+<!-- <a href="#" onclick="signOut();">Sign out</a> -->
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+</body>
+<script> 
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  $.post
+  (
+  "http://localhost/client/loginHandler.php", 
+  {
+  email:profile.getEmail(),
+  password:null,
+  imgurl:profile.getImageUrl(),
+  name:profile.getName()  
+  },
+  function(data)
+  {
+	var response = JSON.parse(data);
+	alert(response);
+  }
+  );
+  
+ // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  //console.log('Name: ' + profile.getName());
+  //console.log('Image URL: ' + profile.getImageUrl());
+  //console.log('Email: ' + profile.getEmail());
+}
+
+</script>
+</html>
+

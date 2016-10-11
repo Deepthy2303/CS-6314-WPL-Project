@@ -1,0 +1,58 @@
+<html>
+<head>
+
+<title>WebService Client Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<style>
+h1      { color:#000066; margin-bottom:5px; }
+.TxtBox { width:180px; }
+</style>
+
+<body>
+
+<h1>Math Calculation Webservice</h1>
+<b><font color=green>This demo connects to localhost</font></b><br>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<Form>
+	Title:
+	<br><input type="text" class="TxtBox" id="title" value="">
+	<br>genre:
+	<br><input type="genre" class="TxtBox" id="genre" value="">
+	
+	<Input value="submit" onClick="get_data()">
+</Form>
+
+</body>
+
+<script> 
+function get_data() {
+
+  $.post
+  (
+  "http://localhost/client/booksHandler.php", 
+  {
+  title:$("#title").val(),
+  genre:$("#genre").val()
+  },
+  function(data)
+  {
+	
+	var response = JSON.parse(data);
+	return response;
+	console.log(response.length);
+	console.log(response[0].author);
+  }
+  );
+  
+ // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  //console.log('Name: ' + profile.getName());
+  //console.log('Image URL: ' + profile.getImageUrl());
+  //console.log('Email: ' + profile.getEmail());
+}
+
+
+</script>
+</html>
+
